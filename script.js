@@ -1,0 +1,1 @@
+console.log("Welcome to Kanyuga Douglas' Portfolio Website!");
