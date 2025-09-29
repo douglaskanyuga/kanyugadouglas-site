@@ -1,33 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanyuga Douglas | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanyuga Douglas | Personal Website</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ===== Header / Navigation ===== -->
   <header>
-    <h1>Kanyuga Douglas</h1>
-    <p>Personal Branding Website</p>
+    <nav>
+      <h1 class="logo">Kanyuga Douglas</h1>
+      
+      <!-- Hamburger menu for small screens -->
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#vlogs">Vlogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello, I’m Douglas. Welcome to my personal brand site!</p>
-    </section>
+  <!-- ===== Hero Section ===== -->
+  <section id="home">
+    <h2>Welcome to My World</h2>
+    <p>I am Douglas Kanyuga, a passionate learner and developer building impactful solutions.</p>
+  </section>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>Projects, blogs, and vlogs will appear here later.</p>
-    </section>
-  </main>
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a self-taught developer and tech enthusiast from Kenya, 
+      exploring coding, design, and creative projects to solve real-world challenges. 
+      This site is my personal brand and digital home.
+    </p>
+  </section>
 
+  <!-- ===== Projects Section ===== -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Here you’ll find coding projects I’ve built and ones in progress.</p>
+    <ul>
+      <li>🚀 Housing_Project – A platform for solving housing challenges in Kenya.</li>
+      <li>📦 Nyx Delivery – A logistics and delivery web app.</li>
+      <li>✨ More projects coming soon...</li>
+    </ul>
+  </section>
+
+  <!-- ===== Blogs Section ===== -->
+  <section id="blogs">
+    <h2>Blogs</h2>
+    <p>
+      I share insights, lessons, and ideas on technology, growth, and creativity.
+      For full blogs, visit my external blog page:
+      <a href="https://yourbloglink.com" target="_blank">Read Blogs</a>
+    </p>
+  </section>
+
+  <!-- ===== Vlogs Section ===== -->
+  <section id="vlogs">
+    <h2>Vlogs</h2>
+    <p>
+      Join me as I share my journey through video content: places I’ve visited and experiences.
+      Watch them here:
+      <a href="https://yourvloglink.com" target="_blank">Watch Vlogs</a>
+    </p>
+  </section>
+
+  <!-- ===== Newsletter Section ===== -->
+  <section id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to my newsletter to follow my journey and new projects.</p>
+    <form action="#" method="POST" class="newsletter-form">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <input type="tel" name="phone" placeholder="Your Phone">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit"><i class="fas fa-envelope"></i> Send Message</button>
+    </form>
+  </section>
+
+
+    <!-- ===== Footer ===== -->
   <footer>
-    <p>&copy; 2025 Kanyuga Douglas</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-reddit"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-medium"></i></a>
+    </div>
+    <p>Kanyuga Douglas &copy; <span id="year"></span>. Works of Glacheka Solutions. All rights observed!</p>
   </footer>
 
-  <script src="script.js"></script>
+
+  <!-- ===== Script for nav toggle ===== -->
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
